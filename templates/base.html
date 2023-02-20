@@ -13,8 +13,11 @@
     {% endblock %}
 
     {% block corecss %}
+        <script src="https://kit.fontawesome.com/142db3e41a.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    {% endblock %}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap">
+        <link rel="stylesheet" href="{% static 'css/base.css'%}">
+        {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
@@ -32,7 +35,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0"><strong>Flower house</strong></h2>
