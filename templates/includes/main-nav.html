@@ -17,10 +17,9 @@
                 Flowers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Roses &amp; Tulips</a>
-                <a href="" class="dropdown-item">Bouquets</a>
-                <a href="" class="dropdown-item">Flower box</a>
-                <a href="{% url 'products'%}" class="dropdown-item">All products</a>
+                <a href="{% url 'products' %}?category=roses" class="dropdown-item">Roses</a>
+                <a href="{% url 'products' %}?category=bouquets" class="dropdown-item">Bouquets</a>
+                <a href="{% url 'products'%}?category=roses,bouquets" class="dropdown-item">All products</a>
             </div>
         </li>
 
@@ -29,9 +28,7 @@
                 Occasions
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="occassions-link">
-                <a href="" class="dropdown-item">Birthday &amp; Parties</a>
-                <a href="" class="dropdown-item">Funerals</a>
-                <a href="" class="dropdown-item">Weddings</a>
+                <a href="{% url 'products' %}?category=weddings" class="dropdown-item">Weddings</a>
             </div>
         </li>
 
