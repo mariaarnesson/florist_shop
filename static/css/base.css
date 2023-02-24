@@ -2,7 +2,7 @@ html {
     height: 100%;
 }
 body {
-    background: url(/media/home_page_background.png) no-repeat center center fixed;
+    background: url(https://img.freepik.com/free-vector/powder-pastel-with-hand-drawn-elements-background_52683-40301.jpg?w=1060&t=st=1677152339~exp=1677152939~hmac=daa76dde8ebef1f1956f90fdb3af18a97c1d4cbe8b2f420d47ab75b22db6683a) no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -34,6 +34,9 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+.btn-white {
+    background-color: transparent;
 }
 .btn-outline-black {
     background: white;
@@ -68,6 +71,9 @@ body {
 .bg-black {
     background: #000 !important;
 }
+.bg-white {
+    background-color: transparent;
+}
 .overlay {
     height: 100%;
     width: 100%;
@@ -89,7 +95,9 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 /* -------------------------------- Media Queries */
