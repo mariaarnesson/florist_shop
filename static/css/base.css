@@ -8,6 +8,9 @@ body {
     color: #555;
     font-family: 'Caveat';
 }
+form {
+    margin: 30px;
+}
 /* from Bulma */
 .icon {
     align-items: center;
