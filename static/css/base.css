@@ -2,10 +2,10 @@ html {
     height: 100%;
 }
 body {
-    background: url(https://img.freepik.com/free-vector/powder-pastel-with-hand-drawn-elements-background_52683-40301.jpg?w=1060&t=st=1677152339~exp=1677152939~hmac=daa76dde8ebef1f1956f90fdb3af18a97c1d4cbe8b2f420d47ab75b22db6683a) no-repeat center center fixed;
+    background: url(https://img.freepik.com/free-photo/female-florist-making-beautiful-arrangement-flowers_23-2149127257.jpg?w=1060&t=st=1677363223~exp=1677363823~hmac=e4b7c3c04e869622c5bcfb868bb56bc398b62ae91baf83566568a00fae9a391b) no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: #CB8589;
     font-family: 'Caveat';
 }
 form {
