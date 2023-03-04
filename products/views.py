@@ -9,6 +9,7 @@ from .forms import ProductForm
 
 # Create your views here.
 
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -63,9 +64,11 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    is_favourite = True
 
     context = {
         'product': product,
+        'is_favourite': is_favourite,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -137,3 +140,4 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
