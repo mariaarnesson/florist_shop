@@ -11,6 +11,10 @@ body {
 form {
     margin: 30px;
 }
+img {
+    width: 250px;
+    height: 250px;
+}
 /* from Bulma */
 .icon {
     align-items: center;

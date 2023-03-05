@@ -28,6 +28,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('favourites/', include('favourites.urls')),
+    path('create_a_bouquet/', include('create_a_bouquet.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'florist_shop.views.handler404'

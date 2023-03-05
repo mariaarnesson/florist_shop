@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'profiles',
     'storages',
     'favourites',
+    'create_a_bouquet'
 ]
 
 MIDDLEWARE = [
