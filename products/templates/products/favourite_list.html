@@ -1,1 +1,96 @@
-<h1>YOUR FAVOURITES</h1>
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_title %} | Products{% endblock %}
+
+<!-- Additional CSS -->
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/product.css' %}">
+{% endblock %}
+
+<!-- I've Kept this page header here as it pushing the Shopping Bag title down
+    below the navigation and delivery banner -->
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- White background overlay div to hide the homepage background image -->
+<div class="overlay"></div>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <!-- Page Title -->
+                <h2 class="page-title">
+                    <strong>My Favourites</strong>
+                </h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="product-container col-10 offset-1">
+                <div class="row">
+                    {% for item in favourite_items %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4 text-center product-card">
+                        <div class="card h-100 border-0">
+                            <!-- Product Image -->
+                            {% if item.image %}
+                            <a href="{% url 'product_details' item.id %}">
+                                <img class="img-fluid item-img" src="{{ item.image.url }}"
+                                    alt="{{ item.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_details' item.id %}">
+                                <img class="img-fluid item-img" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ item.name }}">
+                            </a>
+                            {% endif %}
+                            <!-- Product Name -->
+                            <div class="card-body pb-0">
+                                <p class="mb-0 text-left"><strong>{{ item.name }}</strong></p>
+                            </div>
+                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                                <div class="row">
+                                    <div class="col">
+                                        <!-- Product Price -->
+                                        <p class="mb-0 text-left"><strong>£{{ item.price }}</strong></p>
+                                        <!-- Product Category -->
+                                        {% if item.category %}
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-muted"
+                                                href="{% url 'products' %}?category={{ item.category.name }}">
+                                                <i
+                                                    class="fa-solid fa-tags icon"></i>{{ item.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="small mt-1 mb-0">
+                                            <a class="text-muted" href="{% url 'remove_favourites' item.id 'favourites' %}">
+                                                <i class="fa-solid fa-heart icon"></i>Remove from Favourites
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btt-button icon">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up mx-auto my-auto text-center"></i>
+    </a>	
+</div>
+{% endblock %}
