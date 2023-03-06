@@ -4,8 +4,9 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Favourite
 from .forms import ProductForm
+from django.views.generic import ListView
 
 
 def all_products(request):
@@ -136,6 +137,35 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_favourite(request, product_id):
+    user = get_object_or_404(User, user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+    Favourite.objects.create(user=user, product=product)
+    return redirect(reverse('product_detail', args=[product_id]))
+
+
+@login_required
+def remove_favourite(request, product_id):
+
+    user = get_object_or_404(User, user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+    Favourite.objects.filter(product=product, user=user).delete()
+    return redirect(reverse('product_detail', args=[product.id]))
+
+
+@login_required
+def favourite_list(request):
+
+    user = get_object_or_404(User, user=request.user)
+    all_Favourtes= WishList.objects.filter(user=user)
+    template = 'base.html'
+    context = {
+        'all_Favourtes': all_Favourtes,
+    }
+    return render(request, template, context)
 
 
 '''

@@ -89,6 +89,14 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'favourite_list' %}">
+                            <div class="text-center">
+                                <i class="fas fa-heart fa-lg"></i>
+                                <p>Favourites</p>
+                            </div>    
+                        </a>
+                    </li>  
+                    <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
@@ -102,14 +110,6 @@
                             </div>
                         </a>
                     </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'favourites' %}">
-                            <div class="text-center">
-                                <i class="fas fa-heart fa-lg"></i>
-                            </div>    
-                        </a>
-                    </li>  
-                  
                 </ul>
             </div>
         </div>

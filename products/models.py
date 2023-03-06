@@ -32,7 +32,15 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024,
                                 null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    favourites = models.ManyToManyField(User, related_name='favourites', blank=True)
 
     def __str__(self):
         return self.name
+
+
+class Favourite(models.Model):
+    user_profile = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'({self.user_profile},favourite)'
+        
