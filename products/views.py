@@ -7,8 +7,6 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
-# Create your views here.
-
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -64,11 +62,9 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    is_favourite = True
 
     context = {
         'product': product,
-        'is_favourite': is_favourite,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -140,4 +136,64 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+'''
+@login_required
+def favourites(request):
+    """
+    A view to return a user's favourites
+    """
+    profile = get_object_or_404(UserProfile, user=request.user)
+    products = profile.favourites.all()
+    template = 'products/favourites.html'
+    context = {
+        'products': products,
+        'profile': profile,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def toggle_favourite(request, product_id):
+    """
+    Add or remove a product from a user's list of favourites. Responds to
+    an ajax request made when heart icon is clicked.
+    """
+
+    profile = get_object_or_404(UserProfile, user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+
+    data = {
+        'is_favourite': profile.favourites.filter(pk=product_id).exists(),
+        'is_authenticated': request.user.is_authenticated,
+    }
+
+    if profile.favourites.filter(pk=product_id).exists():
+        profile.favourites.remove(product)
+    else:
+        profile.favourites.add(product)
+
+    return JsonResponse(data)
+
+
+def favourite_list(request):
+    user = request.user
+    product_favourite = user.favourite.all()
+    context = {
+        'product_favourite': product_favourite, 
+    }
+    return render(request, 'product/favourite_list.html', context)
+
+
+def product_favourite(request, id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    if product.favourite.filter(id=request.user.id).exists():
+        product.favourite.remove(request.user)
+    else:
+        product.favourite.add(request.user)
+    return HttpResponseRedirect(post.get_absolute_url())    
+'''
 

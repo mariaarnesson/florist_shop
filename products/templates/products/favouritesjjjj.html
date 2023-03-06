@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col mmb-3">
+        <div class="pb-5 border-accent-primary">
+            <h2 class="text-center mb-5">Your favourites</h2>
+            {% if products|lenght > 0 %}
+            <p class="text-center"> You have chosen {{ products|lenght }} to yours favourites
+                 {{products|lenght|pluralize}}. Click a <span class="icon"><i class="fas fa-heart fa-fw"></i></span>
+                to remove from the list.</p>
+            {% else %}
+            <p class="text-center">No favourites at the moment</p>
+            {% endif %} 
+        </div>
+    </div>
+</div>
+<main class="container my-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 text-center">
+        {% for product in products %}
+            <div class="col mb-4">
+                <div class="card card-products h-100">
+                    <div class="product-img-container">
+                        {% include 'products/includes/product-icon.html' %}
+                        <div class="product-svg-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154 339">
+                                <a href="{% url 'product_detail' product.id %}">
+                                   
+                                </a>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <small>{{ product.brand.friendly_name|upper }}</small>
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</main>
+
+{% endblock %}
+
+{% block extra_js %}
+
+{{ block.super }}
+    <script src="#"></script>
+    <script src="#"></script>
+{% endblock %}
