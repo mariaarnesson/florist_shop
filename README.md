@@ -95,7 +95,7 @@ Also, I included "Send Flowers" within the homepage message’ along with a subh
       -  Users can get inspiration from the instagram platform, showing photos under the title "How to decorate the interior with flowers?". And also included useful information about flowers and how to care for them. 
 
       - Video clips are posted for various occasions, such as a wedding or birthday party where flowers are prominently featured. 
-      
+
     - Event Decor. 
       - The Event Decor function is a blog where large amounts of photos and information about flowers are also posted. 
       - Contests would be held where the winner could win a gift card. 
@@ -104,7 +104,30 @@ Also, I included "Send Flowers" within the homepage message’ along with a subh
 
 2. Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers? 
     - Promotions are updated every week. 
+    - Gift cards
+    - Gift baskets
+    - Free shipping on purchases over $50
 
-    - employees have undergone training on flowers and plant cultivation so they can give advice to users. 
+3. What do your users need? Could you meet that need with useful content? If yes, how could you best deliver that content to them?
 
+Users need flowers for home. With the help of the text and its content, I could present:
  
+- How flowers have a positive effect on our mood
+- How beautiful they can decorate the house
+- What different flowers mean
+- what flowers are best to buy for girls
+- suggestions for bouquets of flowers for weddings and other parties
+- Information and good advice on how to handle flowers correctly way.
+- Information that if a customer wants to know more about their flowers, they can contact us
+- Information about how to keep cut flowers alive longer
+-  Information about how to effectively dry flowers.
+ 
+4. What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?
+
+My company's goal is that customers buy often and a lot of products. I want to post something that catches the eye. I tried to make the interior of my website well-chosen, the colors were chosen to match the color of the flowers, the photos were carefully chosen to arouse people's curiosity.
+
+- In order for people to visit my flower shop often, I would like to have a friendly atmosphere, which I could achieve by posting short posts that are interesting, sometimes funny, for my blogs, facebook and instagram.
+
+- With every post, I would have to include a photo.
+- My site would be updated very often under various titles such as "Valentine's Day", "Flowers for Mother's Day", "Flowers for Easter" with suggestions on which flowers to buy for a given occasion.
+- Marketing types like facebook, instagram, email, blog would definitely help me in my goal.
