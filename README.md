@@ -88,13 +88,15 @@ Also, I included "Send Flowers" within the homepage message’ along with a subh
 
        -Users can get inspiration from the instagram platform, showing photos with the title "How to decorate the interior with flowers?". And also included useful information about flowers and how to care for them. 
 
-     - Video clips are posted for various occasions, such as a wedding or birthday party where flowers are prominently featured. 
+       - Video clips are posted for various occasions, such as a wedding or birthday party where flowers are prominently featured. 
 
     - Facebook. Users can get inspiration from the instagram platform, showing photos under the title "How to decorate the interior with flowers?". And also included useful information about flowers and how to care for them. 
 
-    - Video clips are posted for various occasions, such as a wedding or birthday party where flowers are prominently featured. 
-    - Event Decor. The Event Decor function is a blog where large amounts of photos and information about flowers are also posted. 
-    Contests would be held where the winner could win a gift card. 
+      - Video clips are posted for various occasions, such as a wedding or birthday party where flowers are prominently featured. 
+    - Event Decor. 
+      - The Event Decor function is a blog where large amounts of photos and information about flowers are also posted. 
+      - Contests would be held where the winner could win a gift card. 
+
     - Email. Promotions and inspirations are sent to the user's e-mail. Large pictures are posted and discounted prices are posted in larger fonts to catch the recipient's attention. 
 
 2. Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers? 
