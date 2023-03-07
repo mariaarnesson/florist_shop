@@ -42,5 +42,15 @@ class Favourite(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'({self.user_profile},favourite)'
+        return f'{self.user_profile}, {self.product}'
+
+
+class FavouritesList(models.Model):
+    favourites = models.ForeignKey(
+        Favourite, null=False, blank=False, on_delete=models.CASCADE)
+    product = models.ForeignKey(
+        Product, null=False, blank=False, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.product.id)
         

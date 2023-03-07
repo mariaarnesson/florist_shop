@@ -2,16 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-                <a href="#">
-                <i class="fas fa-heart fa-lg"></i>
-                <p>Favourites</p>
-                </a>
-            </div>
-        </div>
-    </div>
+  
 {% endblock %}
 
 {% block content %}
@@ -67,6 +58,20 @@
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
+                                {% endif %}
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ product.name }}
+                                        <span class="favourite-heart">
+                                            {% if user.is_authenticated %}
+                                                {% if product.name in favourites %}
+                                                    <a href="{% url 'remove_favourite' product.id user.id %}">
+                                                        <i class="fas fa-heart fa-2x"></i>
+                                                    </a>
+                                                {% else %}
+                                                    <a href="{% url 'add_favourite' product.id user.id %}">
+                                                        <i class="far fa-heart fa-2x"></i>
+                                                    </a>
+                                                {% endif %}
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.name }}</p>

@@ -8,10 +8,10 @@ urlpatterns = [
     path('edit/<int:product_id>/', views.edit_product, name='edit_product'),
     path('delete/<int:product_id>/', views.delete_product, name='delete_product'),
     path(
-        'add_favourite/<int:product_id>/',
+        'add_favourite/<int:product_id>/<user_id>/',
         views.add_favourite, name='add_favourite'),
     path(
-        'remove_favourite/<int:product_id>/',
+        'remove_favourite/<int:product_id>/<user_id>/',
         views.remove_favourite, name='remove_favourite'),
     path(
         'favourite_list/',
