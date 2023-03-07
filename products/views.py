@@ -160,10 +160,10 @@ def remove_favourite(request, product_id):
 def favourite_list(request):
 
     user = get_object_or_404(User, user=request.user)
-    all_Favourtes= WishList.objects.filter(user=user)
-    template = 'base.html'
+    all_favourites = WishList.objects.filter(user=user)
+    template = 'home/index.html'
     context = {
-        'all_Favourtes': all_Favourtes,
+        'all_favourites': all_favourites,
     }
     return render(request, template, context)
 
