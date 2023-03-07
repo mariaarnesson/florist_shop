@@ -86,13 +86,16 @@ Also, I included "Send Flowers" within the homepage message’ along with a subh
 1. Would your users use social media? If yes, which platforms do you think you would find them on? 
     - Instagram. 
 
-       -Users can get inspiration from the instagram platform, showing photos with the title "How to decorate the interior with flowers?". And also included useful information about flowers and how to care for them. 
+       - Users can get inspiration from the instagram platform, showing photos with the title "How to decorate the interior with flowers?". And also included useful information about flowers and how to care for them. 
 
        - Video clips are posted for various occasions, such as a wedding or birthday party where flowers are prominently featured. 
 
-    - Facebook. Users can get inspiration from the instagram platform, showing photos under the title "How to decorate the interior with flowers?". And also included useful information about flowers and how to care for them. 
+    - Facebook. 
+    
+      -  Users can get inspiration from the instagram platform, showing photos under the title "How to decorate the interior with flowers?". And also included useful information about flowers and how to care for them. 
 
       - Video clips are posted for various occasions, such as a wedding or birthday party where flowers are prominently featured. 
+      
     - Event Decor. 
       - The Event Decor function is a blog where large amounts of photos and information about flowers are also posted. 
       - Contests would be held where the winner could win a gift card. 
