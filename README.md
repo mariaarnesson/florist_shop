@@ -131,3 +131,8 @@ My company's goal is that customers buy often and a lot of products. I want to p
 - With every post, I would have to include a photo.
 - My site would be updated very often under various titles such as "Valentine's Day", "Flowers for Mother's Day", "Flowers for Easter" with suggestions on which flowers to buy for a given occasion.
 - Marketing types like facebook, instagram, email, blog would definitely help me in my goal.
+
+## Credits 
+
+- [Freepik](https://www.pexels.com/sv-se/)
+- [Pexels](https://www.freepik.com/search?format=search&query=children)

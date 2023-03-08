@@ -161,7 +161,7 @@ def favourite_list(request):
 
     user = get_object_or_404(User, user=request.user)
     all_favourites = WishList.objects.filter(user=user)
-    template = 'home/index.html'
+    template = 'products/favourite_list.html'
     context = {
         'all_favourites': all_favourites,
     }
