@@ -2,7 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-  
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
@@ -60,20 +64,6 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}
-                                        <span class="favourite-heart">
-                                            {% if user.is_authenticated %}
-                                                {% if product.name in favourites %}
-                                                    <a href="{% url 'remove_favourite' product.id user.id %}">
-                                                        <i class="fas fa-heart fa-2x"></i>
-                                                    </a>
-                                                {% else %}
-                                                    <a href="{% url 'add_favourite' product.id user.id %}">
-                                                        <i class="far fa-heart fa-2x"></i>
-                                                    </a>
-                                                {% endif %}
-                                {% endif %}
-                                <div class="card-body pb-0">
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
@@ -91,13 +81,13 @@
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
-                                                {% endif %}
-                                                {% if request.user.is_superuser %}
-                                                    <small class="ml-3">
-                                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                    </small>
-                                                {% endif %}    
+                                            {% endif %}
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
